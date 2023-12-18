@@ -1,0 +1,134 @@
+<div id="container">
+  <main>
+    <header>
+      <img
+        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_01.jpg"
+        alt=""
+      />
+      <div>
+        <h2>Welcome to ACL Digital</h2>
+        <!-- <h3>already 1902 messages</h3> -->
+      </div>
+      <img
+        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_star.png"
+        alt=""
+      />
+    </header>
+    <ul id="chat">
+      <div *ngFor="let item of text$ | async">
+        <li class="you">
+          <div class="entete">
+            <span class="status green"></span>
+            <h2>ACL Digital Foke</h2>
+            <h3>10:12AM, Today</h3>
+          </div>
+          <div class="triangle"></div>
+          <div class="message">
+            <div class="text">
+              <span *ngIf="item | async as item; else loading">
+                {{ item }}
+                <div *ngif="item.indexof('http') === 0">{{ item }}</div>
+              </span>
+              <ng-template #loading
+                ><img
+                  src="https://c.tenor.com/VS20soWAM9AAAAAi/loading.gif"
+                  width="30"
+              /></ng-template>
+            </div>
+          </div>
+        </li>
+      </div>
+      <!-- <li class="you">
+
+
+
+
+        
+        <div class="entete">
+          <span class="status green"></span>
+          <h2>ACL Digital Foke</h2>
+          <h3>10:12AM, Today</h3>
+        </div>
+        <div class="triangle"></div>
+        <div class="message">
+          Please click the below link to fill out the required details and
+          submit.
+        </div>
+      </li> -->
+      <li class="you">
+        <a href="https://www.acldigital.com/">Clieck Here</a>
+        <!-- <div class="loading-dots">
+          <div class="loading-dots--dot"></div>
+          <div class="loading-dots--dot"></div>
+          <div class="loading-dots--dot"></div>
+        </div> -->
+      </li>
+      <!-- <li class="me">
+        <div class="entete">
+          <h3>10:12AM, Today</h3>
+          <h2>Pasent</h2>
+          <span class="status blue"></span>
+        </div>
+        <div class="triangle"></div>
+        <div class="message">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+          commodo ligula eget dolor.
+        </div>
+      </li>
+      <li class="me">
+        <div class="entete">
+          <h3>10:12AM, Today</h3>
+          <h2>Vincent</h2>
+          <span class="status blue"></span>
+        </div>
+        <div class="triangle"></div>
+        <div class="message">OK</div>
+      </li>
+      <li class="you">
+        <div class="entete">
+          <span class="status green"></span>
+          <h2>Vincent</h2>
+          <h3>10:12AM, Today</h3>
+        </div>
+        <div class="triangle"></div>
+        <div class="message">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+          commodo ligula eget dolor.
+        </div>
+      </li>
+      <li class="me">
+        <div class="entete">
+          <h3>10:12AM, Today</h3>
+          <h2>Vincent</h2>
+          <span class="status blue"></span>
+        </div>
+        <div class="triangle"></div>
+        <div class="message">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+          commodo ligula eget dolor.
+        </div>
+      </li>
+      <li class="me">
+        <div class="entete">
+          <h3>10:12AM, Today</h3>
+          <h2>Vincent</h2>
+          <span class="status blue"></span>
+        </div>
+        <div class="triangle"></div>
+        <div class="message">OK</div>
+      </li> -->
+    </ul>
+    <footer>
+      <!-- <textarea placeholder="Type your message"></textarea>
+      <img
+        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_picture.png"
+        alt=""
+      />
+      <img
+        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_file.png"
+        alt=""
+      />
+      <a href="#">Send</a> -->
+    </footer>
+  </main>
+</div>
